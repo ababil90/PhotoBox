@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+video {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+canvas {
+    display: none;
+}
+.delete-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+#photos {
+    margin-top: 20px;
+}
+
+#photos img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 5px;
+}
+@media print {
+    body * {
+        visibility: hidden; /* Sembunyikan semua elemen */
+    }
+
+    #photos, #photos * {
+        visibility: visible; /* Tampilkan hanya foto */
+    }
+
+    #photos {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    #photos img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+    }
+}
+.photo-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.photo-container img {
+    max-width: 200px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(255, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.delete-btn:hover {
+    background: rgba(255, 0, 0, 1);
+}
+
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
